@@ -1,0 +1,16 @@
+1. 使用 init_worker_by_lua_file ;而且 该指令一定要在 http 段使用
+
+2. 使用ngx.worker.id() 范围判断 其中几个；默认数目是 = nginx worker  数目；
+
+
+3. 当开启缓存进程后;有 2个 ；ngx.worker.id() == 0 注意了 有三个进程 ；；如果只需要一个 则 =1 判断比较好；
+   毕竟目前机器开启worker的数目；即cpu单核的可能性很小；
+
+
+
+4.对于池化技术；只需要在close的时候设置set_keepalive就可以了；即数据处理完成后加入池中；
+
+5. resty-mysql 可以通过query实现 crud; 
+
+
+

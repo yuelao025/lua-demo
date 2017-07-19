@@ -16,6 +16,8 @@
 6.     #共享全局变量，在所有worker间共享
     lua_shared_dict shared_data 10m;  另外要在 http段使用
 
+    lru 在一个worker 中
+
 7. openresty 指令与api 区别
    ngx.md5
    ngx.shared

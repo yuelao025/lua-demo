@@ -13,6 +13,14 @@ local config = {
     password = "7uxYbBNg"
 }
 
+-- local config = {
+--     host = "127.0.0.1",
+--     port = 3306,
+--     database = "blog",
+--     user = "root",
+--     password = "123456"
+-- }
+
 
 local _M = {}
 

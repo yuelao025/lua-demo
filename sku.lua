@@ -45,7 +45,7 @@ local function sku_info()
 			local res, err, errno, sqlstate  = db:query(sql)
 			-- ngx.say(res,err)
 			ngx.say(cjson.encode(res))
-			ngx.log(ngx.ERR,cjson.encode(res))
+			-- ngx.log(ngx.ERR,cjson.encode(res))
 		end
 
 		-- ngx.say(sql)

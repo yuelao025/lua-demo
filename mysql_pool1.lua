@@ -5,21 +5,21 @@ local mysql = require "resty.mysql"
 
 
 
-local config = {
-    host = "192.168.1.247",
-    port = 3306,
-    database = "supplier",
-    user = "supplieradmim",
-    password = "7uxYbBNg"
-}
-
 -- local config = {
---     host = "127.0.0.1",
+--     host = "192.168.1.247",
 --     port = 3306,
---     database = "blog",
---     user = "root",
---     password = "123456"
+--     database = "supplier",
+--     user = "supplieradmim",
+--     password = "7uxYbBNg"
 -- }
+
+local config = {
+    host = "127.0.0.1",
+    port = 3306,
+    database = "blog",
+    user = "root",
+    password = "123456"
+}
 
 
 local _M = {}
@@ -53,7 +53,7 @@ local function close(self)
     if self.subscribed then
         return nil, "subscribed state"
     end
-    return sock:setkeepalive(10000, 50)
+    return sock:setkeepalive(10000, 200)
 end
 
 return _M
